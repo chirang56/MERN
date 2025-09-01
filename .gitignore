@@ -1,31 +1,78 @@
-# Logs
-logs
-*.log
+# ====================
+# Node.js / Backend
+# ====================
+node_modules/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
-dist
-dist-ssr
-*.local
-
-# Editor directories and files
-.vscode/*
-!.vscode/extensions.json
-.idea
-.DS_Store
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
-
-# Environment variables
-.env 
+# Environment files (API keys, DB URIs, secrets)
+.env
 .env.local
 .env.development.local
 .env.test.local
 .env.production.local
+
+# Build outputs
+dist/
+build/
+
+# Logs
+*.log
+logs/
+debug.log
+
+# Coverage / Testing
+coverage/
+.nyc_output/
+
+# ====================
+# React / Frontend
+# ====================
+/client/node_modules/
+/client/build/
+/client/dist/
+/client/.next
+/client/.cache
+
+# Local env for frontend
+/client/.env
+/client/.env.local
+/client/.env.development.local
+/client/.env.test.local
+/client/.env.production.local
+
+# ====================
+# OS / Editor / Misc
+# ====================
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*.bak
+*.tmp
+*.temp
+*.orig
+
+# IDE settings
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# TypeScript (if using TS in client or server)
+*.tsbuildinfo
+next-env.d.ts
+
+# ====================
+# Optional: lock files
+# ====================
+# If you use only one package manager, ignore the others
+# package-lock.json
+# yarn.lock
+# pnpm-lock.yaml

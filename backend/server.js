@@ -3,12 +3,12 @@ import express from 'express';
 const app = express();
 app.get('/api/notes', (req, res) => {
     // send all notes
-    res.send("you have your notes here");
+    res.status(200).send("You have got your notes here");
 });
 
 app.post("/api/notes", (req, res) => {
     // add or create a new note
-    res.send("note added");
+    res.status(201).send("note added successfully");
 });
 
 app.listen(5001, () => {
